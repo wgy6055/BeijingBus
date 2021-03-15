@@ -1,0 +1,23 @@
+PODS:
+  - ChinaShift (0.1.0)
+  - ObjectMapper (4.2.0)
+
+DEPENDENCIES:
+  - ChinaShift (from `libs/ChinaShift`)
+  - ObjectMapper
+
+SPEC REPOS:
+  trunk:
+    - ObjectMapper
+
+EXTERNAL SOURCES:
+  ChinaShift:
+    :path: libs/ChinaShift
+
+SPEC CHECKSUMS:
+  ChinaShift: 445e3cfe3374c94914b570fc6263fe7ab654cf3d
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+
+PODFILE CHECKSUM: 13c0f5caada724205142cc4cda52d839251819ad
+
+COCOAPODS: 1.10.0

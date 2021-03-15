@@ -1,0 +1,823 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B4F9DE41AD12FDC472EAD4F /* Pods_BeijingBus_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59D0797BCC22A652B6955C6 /* Pods_BeijingBus_WatchKit_Extension.framework */; };
+		9B01A37E25F92267006348CA /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01A37D25F92267006348CA /* StationCell.swift */; };
+		9B01A38325F9227F006348CA /* TerminalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01A38225F9227F006348CA /* TerminalCell.swift */; };
+		9B01A38825F922B0006348CA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01A38725F922B0006348CA /* MapView.swift */; };
+		9B1CE7B125EF39B8009FDD29 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CE7B025EF39B8009FDD29 /* DetailView.swift */; };
+		9B4C511C25EFF23300E96633 /* SwiftUI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C511B25EFF23300E96633 /* SwiftUI+Extensions.swift */; };
+		9B4C512425EFF4E800E96633 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C512325EFF4E800E96633 /* DataManager.swift */; };
+		9B6D6B0325FB2D5200370ACA /* BeijingBusAPI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D6B0225FB2D5200370ACA /* BeijingBusAPI+Extension.swift */; };
+		9B6D6B1325FBBFB600370ACA /* MapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D6B1225FBBFB600370ACA /* MapOverlay.swift */; };
+		9B6D6B2425FFAB7000370ACA /* StatusSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D6B2325FFAB7000370ACA /* StatusSummary.swift */; };
+		9BE5927925E6A0CF0004F91B /* BeijingBus WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9BE5927825E6A0CF0004F91B /* BeijingBus WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9BE5927F25E6A0CF0004F91B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5927D25E6A0CF0004F91B /* Interface.storyboard */; };
+		9BE5928125E6A0D00004F91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5928025E6A0D00004F91B /* Assets.xcassets */; };
+		9BE5928825E6A0D00004F91B /* BeijingBus WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9BE5928725E6A0D00004F91B /* BeijingBus WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9BE5928D25E6A0D00004F91B /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5928C25E6A0D00004F91B /* HostingController.swift */; };
+		9BE5928F25E6A0D00004F91B /* LineNumberPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5928E25E6A0D00004F91B /* LineNumberPickerView.swift */; };
+		9BE5929125E6A0D00004F91B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5929025E6A0D00004F91B /* ExtensionDelegate.swift */; };
+		9BE5929325E6A0D00004F91B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5929225E6A0D00004F91B /* NotificationController.swift */; };
+		9BE5929525E6A0D00004F91B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5929425E6A0D00004F91B /* NotificationView.swift */; };
+		9BE5929725E6A0D00004F91B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5929625E6A0D00004F91B /* ComplicationController.swift */; };
+		9BE5929925E6A0D00004F91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5929825E6A0D00004F91B /* Assets.xcassets */; };
+		9BE5929C25E6A0D00004F91B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5929B25E6A0D00004F91B /* Preview Assets.xcassets */; };
+		9BE592B125E6A1530004F91B /* BeijingBusAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE592B025E6A1530004F91B /* BeijingBusAPI.swift */; };
+		9BE592B925E6A1DB0004F91B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE592B825E6A1DB0004F91B /* Models.swift */; };
+		9BE592CA25E6B4170004F91B /* Decryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE592C925E6B4160004F91B /* Decryption.swift */; };
+		9BE592CF25E6B45D0004F91B /* RC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE592CE25E6B45D0004F91B /* RC4.swift */; };
+		9BE592D425E6B4850004F91B /* md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE592D325E6B4850004F91B /* md5.swift */; };
+		9E9271582D1BA1F899AC9663 /* Pods_BeijingBus_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6E9F4F7F9BA7402A4139E7 /* Pods_BeijingBus_WatchKit_App.framework */; };
+		F2B35E6C58A9B8C7647012F4 /* Pods_BeijingBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E2787704815E99CA594732 /* Pods_BeijingBus.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BE5927A25E6A0CF0004F91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BE5926E25E6A0CF0004F91B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BE5927725E6A0CF0004F91B;
+			remoteInfo = "BeijingBus WatchKit App";
+		};
+		9BE5928925E6A0D00004F91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BE5926E25E6A0CF0004F91B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BE5928625E6A0D00004F91B;
+			remoteInfo = "BeijingBus WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9BE592A425E6A0D00004F91B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9BE5928825E6A0D00004F91B /* BeijingBus WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE592A825E6A0D00004F91B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9BE5927925E6A0CF0004F91B /* BeijingBus WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00F15D7381CA7EE7FE0E931E /* Pods-BeijingBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeijingBus.debug.xcconfig"; path = "Target Support Files/Pods-BeijingBus/Pods-BeijingBus.debug.xcconfig"; sourceTree = "<group>"; };
+		15E2787704815E99CA594732 /* Pods_BeijingBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeijingBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51AFA6D6287E69CB93150ADD /* Pods-BeijingBus WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeijingBus WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-BeijingBus WatchKit App/Pods-BeijingBus WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		53010A7328E797458267A56C /* Pods-BeijingBus WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeijingBus WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-BeijingBus WatchKit Extension/Pods-BeijingBus WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		56DE0F5BAB5E1C9D03F68C3F /* Pods-BeijingBus WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeijingBus WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-BeijingBus WatchKit App/Pods-BeijingBus WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		6ADE259ABD24DC172AE831EB /* Pods-BeijingBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeijingBus.release.xcconfig"; path = "Target Support Files/Pods-BeijingBus/Pods-BeijingBus.release.xcconfig"; sourceTree = "<group>"; };
+		8A7D7BDC2B538268E6FCE13A /* Pods-BeijingBus WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeijingBus WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-BeijingBus WatchKit Extension/Pods-BeijingBus WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		9B01A37D25F92267006348CA /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		9B01A38225F9227F006348CA /* TerminalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalCell.swift; sourceTree = "<group>"; };
+		9B01A38725F922B0006348CA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9B1CE7B025EF39B8009FDD29 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		9B4C511B25EFF23300E96633 /* SwiftUI+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extensions.swift"; sourceTree = "<group>"; };
+		9B4C512325EFF4E800E96633 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9B6D6B0225FB2D5200370ACA /* BeijingBusAPI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeijingBusAPI+Extension.swift"; sourceTree = "<group>"; };
+		9B6D6B1225FBBFB600370ACA /* MapOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlay.swift; sourceTree = "<group>"; };
+		9B6D6B2325FFAB7000370ACA /* StatusSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSummary.swift; sourceTree = "<group>"; };
+		9BE5927425E6A0CF0004F91B /* BeijingBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeijingBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE5927825E6A0CF0004F91B /* BeijingBus WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeijingBus WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE5927E25E6A0CF0004F91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9BE5928025E6A0D00004F91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BE5928225E6A0D00004F91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BE5928725E6A0D00004F91B /* BeijingBus WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BeijingBus WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE5928C25E6A0D00004F91B /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		9BE5928E25E6A0D00004F91B /* LineNumberPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNumberPickerView.swift; sourceTree = "<group>"; };
+		9BE5929025E6A0D00004F91B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		9BE5929225E6A0D00004F91B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		9BE5929425E6A0D00004F91B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		9BE5929625E6A0D00004F91B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		9BE5929825E6A0D00004F91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BE5929B25E6A0D00004F91B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9BE5929D25E6A0D00004F91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BE5929E25E6A0D00004F91B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		9BE592B025E6A1530004F91B /* BeijingBusAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeijingBusAPI.swift; sourceTree = "<group>"; };
+		9BE592B825E6A1DB0004F91B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		9BE592C925E6B4160004F91B /* Decryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decryption.swift; sourceTree = "<group>"; };
+		9BE592CE25E6B45D0004F91B /* RC4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RC4.swift; sourceTree = "<group>"; };
+		9BE592D325E6B4850004F91B /* md5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = md5.swift; sourceTree = "<group>"; };
+		BD6E9F4F7F9BA7402A4139E7 /* Pods_BeijingBus_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeijingBus_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F59D0797BCC22A652B6955C6 /* Pods_BeijingBus_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeijingBus_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DDA8A858A2E56246DF71024 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E9271582D1BA1F899AC9663 /* Pods_BeijingBus_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9D2E91D7805E8445789FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2B35E6C58A9B8C7647012F4 /* Pods_BeijingBus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE5928425E6A0D00004F91B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B4F9DE41AD12FDC472EAD4F /* Pods_BeijingBus_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3651BF0664913042CA692325 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00F15D7381CA7EE7FE0E931E /* Pods-BeijingBus.debug.xcconfig */,
+				6ADE259ABD24DC172AE831EB /* Pods-BeijingBus.release.xcconfig */,
+				56DE0F5BAB5E1C9D03F68C3F /* Pods-BeijingBus WatchKit App.debug.xcconfig */,
+				51AFA6D6287E69CB93150ADD /* Pods-BeijingBus WatchKit App.release.xcconfig */,
+				8A7D7BDC2B538268E6FCE13A /* Pods-BeijingBus WatchKit Extension.debug.xcconfig */,
+				53010A7328E797458267A56C /* Pods-BeijingBus WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9B1CE7B525EF3A7A009FDD29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BE5928E25E6A0D00004F91B /* LineNumberPickerView.swift */,
+				9B1CE7B025EF39B8009FDD29 /* DetailView.swift */,
+				9B01A37D25F92267006348CA /* StationCell.swift */,
+				9B01A38225F9227F006348CA /* TerminalCell.swift */,
+				9B01A38725F922B0006348CA /* MapView.swift */,
+				9B6D6B1225FBBFB600370ACA /* MapOverlay.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B4C511A25EFF21700E96633 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C511B25EFF23300E96633 /* SwiftUI+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9B6D6B2225FFAB5C00370ACA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C512325EFF4E800E96633 /* DataManager.swift */,
+				9B6D6B2325FFAB7000370ACA /* StatusSummary.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9BE5926D25E6A0CF0004F91B = {
+			isa = PBXGroup;
+			children = (
+				9BE5927C25E6A0CF0004F91B /* BeijingBus WatchKit App */,
+				9BE5928B25E6A0D00004F91B /* BeijingBus WatchKit Extension */,
+				9BE5927525E6A0CF0004F91B /* Products */,
+				3651BF0664913042CA692325 /* Pods */,
+				F402280A7E23D5513673DE37 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9BE5927525E6A0CF0004F91B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BE5927425E6A0CF0004F91B /* BeijingBus.app */,
+				9BE5927825E6A0CF0004F91B /* BeijingBus WatchKit App.app */,
+				9BE5928725E6A0D00004F91B /* BeijingBus WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BE5927C25E6A0CF0004F91B /* BeijingBus WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				9BE5927D25E6A0CF0004F91B /* Interface.storyboard */,
+				9BE5928025E6A0D00004F91B /* Assets.xcassets */,
+				9BE5928225E6A0D00004F91B /* Info.plist */,
+			);
+			path = "BeijingBus WatchKit App";
+			sourceTree = "<group>";
+		};
+		9BE5928B25E6A0D00004F91B /* BeijingBus WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9B6D6B2225FFAB5C00370ACA /* Data */,
+				9B4C511A25EFF21700E96633 /* Utils */,
+				9B1CE7B525EF3A7A009FDD29 /* View */,
+				9BE592AF25E6A1410004F91B /* API */,
+				9BE5928C25E6A0D00004F91B /* HostingController.swift */,
+				9BE5929025E6A0D00004F91B /* ExtensionDelegate.swift */,
+				9BE5929225E6A0D00004F91B /* NotificationController.swift */,
+				9BE5929425E6A0D00004F91B /* NotificationView.swift */,
+				9BE5929625E6A0D00004F91B /* ComplicationController.swift */,
+				9BE5929825E6A0D00004F91B /* Assets.xcassets */,
+				9BE5929D25E6A0D00004F91B /* Info.plist */,
+				9BE5929E25E6A0D00004F91B /* PushNotificationPayload.apns */,
+				9BE5929A25E6A0D00004F91B /* Preview Content */,
+			);
+			path = "BeijingBus WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		9BE5929A25E6A0D00004F91B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9BE5929B25E6A0D00004F91B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9BE592AF25E6A1410004F91B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9BE592B025E6A1530004F91B /* BeijingBusAPI.swift */,
+				9BE592B825E6A1DB0004F91B /* Models.swift */,
+				9BE592C925E6B4160004F91B /* Decryption.swift */,
+				9BE592CE25E6B45D0004F91B /* RC4.swift */,
+				9BE592D325E6B4850004F91B /* md5.swift */,
+				9B6D6B0225FB2D5200370ACA /* BeijingBusAPI+Extension.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F402280A7E23D5513673DE37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15E2787704815E99CA594732 /* Pods_BeijingBus.framework */,
+				BD6E9F4F7F9BA7402A4139E7 /* Pods_BeijingBus_WatchKit_App.framework */,
+				F59D0797BCC22A652B6955C6 /* Pods_BeijingBus_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BE5927325E6A0CF0004F91B /* BeijingBus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BE592A925E6A0D00004F91B /* Build configuration list for PBXNativeTarget "BeijingBus" */;
+			buildPhases = (
+				275C55754133DE887E2D68BC /* [CP] Check Pods Manifest.lock */,
+				9BE5927225E6A0CF0004F91B /* Resources */,
+				9BE592A825E6A0D00004F91B /* Embed Watch Content */,
+				2F9D2E91D7805E8445789FB8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BE5927B25E6A0CF0004F91B /* PBXTargetDependency */,
+			);
+			name = BeijingBus;
+			productName = BeijingBus;
+			productReference = 9BE5927425E6A0CF0004F91B /* BeijingBus.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		9BE5927725E6A0CF0004F91B /* BeijingBus WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BE592A525E6A0D00004F91B /* Build configuration list for PBXNativeTarget "BeijingBus WatchKit App" */;
+			buildPhases = (
+				36FE8CA0C270D162702F4D1A /* [CP] Check Pods Manifest.lock */,
+				9BE5927625E6A0CF0004F91B /* Resources */,
+				9BE592A425E6A0D00004F91B /* Embed App Extensions */,
+				1DDA8A858A2E56246DF71024 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BE5928A25E6A0D00004F91B /* PBXTargetDependency */,
+			);
+			name = "BeijingBus WatchKit App";
+			productName = "BeijingBus WatchKit App";
+			productReference = 9BE5927825E6A0CF0004F91B /* BeijingBus WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9BE5928625E6A0D00004F91B /* BeijingBus WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BE592A125E6A0D00004F91B /* Build configuration list for PBXNativeTarget "BeijingBus WatchKit Extension" */;
+			buildPhases = (
+				16764408BC81BAA20D72E4D4 /* [CP] Check Pods Manifest.lock */,
+				9BE5928325E6A0D00004F91B /* Sources */,
+				9BE5928425E6A0D00004F91B /* Frameworks */,
+				9BE5928525E6A0D00004F91B /* Resources */,
+				C6C2FF0D9D912D0D9D002F6A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BeijingBus WatchKit Extension";
+			productName = "BeijingBus WatchKit Extension";
+			productReference = 9BE5928725E6A0D00004F91B /* BeijingBus WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BE5926E25E6A0CF0004F91B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					9BE5927325E6A0CF0004F91B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					9BE5927725E6A0CF0004F91B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					9BE5928625E6A0D00004F91B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 9BE5927125E6A0CF0004F91B /* Build configuration list for PBXProject "BeijingBus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BE5926D25E6A0CF0004F91B;
+			productRefGroup = 9BE5927525E6A0CF0004F91B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BE5927325E6A0CF0004F91B /* BeijingBus */,
+				9BE5927725E6A0CF0004F91B /* BeijingBus WatchKit App */,
+				9BE5928625E6A0D00004F91B /* BeijingBus WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BE5927225E6A0CF0004F91B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE5927625E6A0CF0004F91B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE5928125E6A0D00004F91B /* Assets.xcassets in Resources */,
+				9BE5927F25E6A0CF0004F91B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE5928525E6A0D00004F91B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE5929C25E6A0D00004F91B /* Preview Assets.xcassets in Resources */,
+				9BE5929925E6A0D00004F91B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16764408BC81BAA20D72E4D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeijingBus WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		275C55754133DE887E2D68BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeijingBus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36FE8CA0C270D162702F4D1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeijingBus WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6C2FF0D9D912D0D9D002F6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeijingBus WatchKit Extension/Pods-BeijingBus WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeijingBus WatchKit Extension/Pods-BeijingBus WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeijingBus WatchKit Extension/Pods-BeijingBus WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BE5928325E6A0D00004F91B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE592D425E6B4850004F91B /* md5.swift in Sources */,
+				9B4C511C25EFF23300E96633 /* SwiftUI+Extensions.swift in Sources */,
+				9B1CE7B125EF39B8009FDD29 /* DetailView.swift in Sources */,
+				9B4C512425EFF4E800E96633 /* DataManager.swift in Sources */,
+				9BE5928F25E6A0D00004F91B /* LineNumberPickerView.swift in Sources */,
+				9B01A37E25F92267006348CA /* StationCell.swift in Sources */,
+				9BE5928D25E6A0D00004F91B /* HostingController.swift in Sources */,
+				9B6D6B1325FBBFB600370ACA /* MapOverlay.swift in Sources */,
+				9B6D6B2425FFAB7000370ACA /* StatusSummary.swift in Sources */,
+				9BE5929325E6A0D00004F91B /* NotificationController.swift in Sources */,
+				9BE592B925E6A1DB0004F91B /* Models.swift in Sources */,
+				9B01A38825F922B0006348CA /* MapView.swift in Sources */,
+				9B01A38325F9227F006348CA /* TerminalCell.swift in Sources */,
+				9BE592B125E6A1530004F91B /* BeijingBusAPI.swift in Sources */,
+				9BE592CF25E6B45D0004F91B /* RC4.swift in Sources */,
+				9BE592CA25E6B4170004F91B /* Decryption.swift in Sources */,
+				9B6D6B0325FB2D5200370ACA /* BeijingBusAPI+Extension.swift in Sources */,
+				9BE5929125E6A0D00004F91B /* ExtensionDelegate.swift in Sources */,
+				9BE5929525E6A0D00004F91B /* NotificationView.swift in Sources */,
+				9BE5929725E6A0D00004F91B /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BE5927B25E6A0CF0004F91B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BE5927725E6A0CF0004F91B /* BeijingBus WatchKit App */;
+			targetProxy = 9BE5927A25E6A0CF0004F91B /* PBXContainerItemProxy */;
+		};
+		9BE5928A25E6A0D00004F91B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BE5928625E6A0D00004F91B /* BeijingBus WatchKit Extension */;
+			targetProxy = 9BE5928925E6A0D00004F91B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BE5927D25E6A0CF0004F91B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BE5927E25E6A0CF0004F91B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BE5929F25E6A0D00004F91B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BE592A025E6A0D00004F91B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BE592A225E6A0D00004F91B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A7D7BDC2B538268E6FCE13A /* Pods-BeijingBus WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"BeijingBus WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "BeijingBus WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgy.BeijingBus.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		9BE592A325E6A0D00004F91B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53010A7328E797458267A56C /* Pods-BeijingBus WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"BeijingBus WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "BeijingBus WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgy.BeijingBus.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+		9BE592A625E6A0D00004F91B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56DE0F5BAB5E1C9D03F68C3F /* Pods-BeijingBus WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				IBSC_MODULE = BeijingBus_WatchKit_Extension;
+				INFOPLIST_FILE = "BeijingBus WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgy.BeijingBus.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		9BE592A725E6A0D00004F91B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51AFA6D6287E69CB93150ADD /* Pods-BeijingBus WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				IBSC_MODULE = BeijingBus_WatchKit_Extension;
+				INFOPLIST_FILE = "BeijingBus WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgy.BeijingBus.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+		9BE592AA25E6A0D00004F91B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00F15D7381CA7EE7FE0E931E /* Pods-BeijingBus.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgy.BeijingBus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9BE592AB25E6A0D00004F91B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ADE259ABD24DC172AE831EB /* Pods-BeijingBus.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgy.BeijingBus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BE5927125E6A0CF0004F91B /* Build configuration list for PBXProject "BeijingBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE5929F25E6A0D00004F91B /* Debug */,
+				9BE592A025E6A0D00004F91B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE592A125E6A0D00004F91B /* Build configuration list for PBXNativeTarget "BeijingBus WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE592A225E6A0D00004F91B /* Debug */,
+				9BE592A325E6A0D00004F91B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE592A525E6A0D00004F91B /* Build configuration list for PBXNativeTarget "BeijingBus WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE592A625E6A0D00004F91B /* Debug */,
+				9BE592A725E6A0D00004F91B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE592A925E6A0D00004F91B /* Build configuration list for PBXNativeTarget "BeijingBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE592AA25E6A0D00004F91B /* Debug */,
+				9BE592AB25E6A0D00004F91B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BE5926E25E6A0CF0004F91B /* Project object */;
+}
