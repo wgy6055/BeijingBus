@@ -13,21 +13,24 @@ class StatusSummary: ObservableObject {
     @Published var distance: Int = 0
     @Published var pastDurationFromLatestUpdate: TimeInterval = 0
 
+    let stationInfo: (lineID: String, stationName: String, indexInLine: Int)
+
     private var timer: Timer?
     private var latestUpdateTime: Date? {
         didSet {
             pastDurationFromLatestUpdate = 0
         }
     }
-    let stationInfo: (lineID: String, stationName: String, indexInLine: Int)
 
     init(stationInfo: (lineID: String, stationName: String, indexInLine: Int)) {
         self.stationInfo = stationInfo
     }
 
+    // MARK: - Public Method
+
     public func startUpdate() {
         let timer = Timer.scheduledTimer(withTimeInterval: 10,
-                                     repeats: true) { (_) in
+                                         repeats: true) { (_) in
             self.refreshIfNeeded()
         }
         RunLoop.current.add(timer, forMode: .common)
@@ -39,6 +42,8 @@ class StatusSummary: ObservableObject {
         timer?.invalidate()
         timer = nil
     }
+
+    // MARK: - Private Method
 
     private func refreshIfNeeded() {
         if let latestUpdateTime = latestUpdateTime {
@@ -53,8 +58,8 @@ class StatusSummary: ObservableObject {
                                                        stationName: stationInfo.stationName,
                                                        indexInLine: stationInfo.indexInLine) { (status, _) in
             guard let status = status else { return }
-            self.duration = status.estimatedRunDuration
-            self.distance = status.distanceRemain
+            self.duration = max(status.estimatedRunDuration, 0)
+            self.distance = max(status.distanceRemain, 0)
             self.latestUpdateTime = Date()
         }
     }

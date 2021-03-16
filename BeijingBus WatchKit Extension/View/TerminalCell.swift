@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TerminalCell: View {
+
     @Binding var startStation: String
     @Binding var endStation: String
     @Binding var exchangeEnabled: Bool
+
     var refreshHandler: () -> Void = {}
 
     var body: some View {
-        let screenWidth = WKInterfaceDevice.current().screenBounds.width
         HStack(alignment: .center) {
             VStack(alignment: .leading) {
                 Text("🏁 " + startStation).lineLimit(1)
@@ -25,13 +26,15 @@ struct TerminalCell: View {
             Spacer()
 
             Button(action: refreshHandler) {
-                Image("exchange").resizable()
+                Image("exchange")
+                    .resizable()
                     .frame(width: 20.0, height: 20.0)
             }
             .frame(width: 44.0, height: 44.0)
             .allowsHitTesting(exchangeEnabled)
-
-        }.frame(width: screenWidth, alignment: .center)
+        }
+        .frame(width: WKInterfaceDevice.current().screenBounds.width,
+                alignment: .center)
     }
 }
 

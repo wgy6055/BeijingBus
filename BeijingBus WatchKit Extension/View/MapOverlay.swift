@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MapOverlay: View {
+
     @ObservedObject var summary: StatusSummary
 
     private var displayDuration: String {
@@ -38,8 +39,9 @@ struct MapOverlay: View {
         LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.6),
                                                    Color.black.opacity(0)]),
                        startPoint: .top,
-                       endPoint: .center)
+                       endPoint: .bottom)
     }
+
     var body: some View {
         ZStack(alignment: .topLeading) {
             Rectangle().fill(gradient)
@@ -48,6 +50,7 @@ struct MapOverlay: View {
                 Text(String(format: "⏳\u{2009}预计\u{2009}%@，%@", displayDuration, displayDistance))
                     .bold()
                     .padding([.leading, .top, .trailing])
+
                 Text(displayPastTime)
                     .font(.footnote)
                     .padding(.leading, 13)

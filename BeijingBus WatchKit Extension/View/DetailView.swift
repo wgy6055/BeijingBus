@@ -14,15 +14,14 @@ struct DetailView: View {
         var name: String = ""
     }
 
-//    private let lineNumber: String
+    private let lineMetas: (forward: LineMeta, backward: LineMeta)?
+
     @State private var isForward = true
     @State private var startStation = ""
     @State private var endStation = ""
     @State private var stations: [Station] = []
     @State private var currentLineDetail: LineDetail?
     @State private var exchangeEnabled = true
-    private let lineMetas: (forward: LineMeta, backward: LineMeta)?
-
     @State private var selectedUUID: UUID?
 
     init(lineNumber: String) {

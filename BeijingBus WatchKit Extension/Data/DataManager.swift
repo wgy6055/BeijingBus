@@ -11,7 +11,7 @@ class DataManager {
 
     static let shared = DataManager()
 
-    var allLines: [LineMeta] = []
+    private var allLines: [LineMeta] = []
     private init() {}
     
     func setup() {
