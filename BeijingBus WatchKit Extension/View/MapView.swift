@@ -19,9 +19,6 @@ struct MapView: View {
     private let station: Point
     private var summary: StatusSummary
 
-    @State private var estimatedDuration: TimeInterval = 0
-    @State private var estimatedDistance: Int = 0
-
     init(lineDetail:LineDetail, station: LineDetail.Station) {
         self.station = Point(location: station.location.CLCoordinate2D)
         region = MKCoordinateRegion(center: station.location.CLCoordinate2D,
