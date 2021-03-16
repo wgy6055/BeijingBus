@@ -33,8 +33,6 @@ struct TerminalCell: View {
             .frame(width: 44.0, height: 44.0)
             .allowsHitTesting(exchangeEnabled)
         }
-        .frame(width: WKInterfaceDevice.current().screenBounds.width,
-                alignment: .center)
     }
 }
 
