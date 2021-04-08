@@ -24,7 +24,7 @@ struct LineNumberPickerView: View {
 
     var body: some View {
         NavigationView {
-            VStack() {
+            VStack {
                 Spacer()
 
                 Text("🚌 请选择公交线路")
@@ -42,13 +42,13 @@ struct LineNumberPickerView: View {
 
                 Spacer(minLength: 30)
 
-                NavigationLink(destination: DetailView(lineNumber: lineNumber)) { Text("查询") }
+                NavigationLink("查询", destination: DetailView(lineNumber: lineNumber))
             }
         }
     }
 
     private func picker(bindTo selectedIndex: Binding<Double>) -> some View {
-        return Picker("", selection: selectedIndex) {
+        Picker("", selection: selectedIndex) {
             ForEach((0 ..< numbers.count)) {
                 Text(String(numbers[$0]))
                     .foregroundColor(Color(rgbValue: 0x00ced1))

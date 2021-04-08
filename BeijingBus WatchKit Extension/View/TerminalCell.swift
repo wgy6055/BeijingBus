@@ -9,14 +9,14 @@ import SwiftUI
 
 struct TerminalCell: View {
 
-    @Binding var startStation: String
-    @Binding var endStation: String
+    var startStation: String
+    var endStation: String
     @Binding var exchangeEnabled: Bool
 
     var refreshHandler: () -> Void = {}
 
     var body: some View {
-        HStack(alignment: .center) {
+        HStack {
             VStack(alignment: .leading) {
                 Text("🏁 " + startStation).lineLimit(1)
                 Spacer()
@@ -39,8 +39,8 @@ struct TerminalCell: View {
 struct TerminalCell_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            TerminalCell(startStation: .constant("首开广场"),
-                         endStation: .constant("望京 SOHO"),
+            TerminalCell(startStation: "首开广场",
+                         endStation: "望京 SOHO",
                          exchangeEnabled: .constant(true))
         }
     }

@@ -31,8 +31,8 @@ struct DetailView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/) {
             VStack(spacing:0) {
-                TerminalCell(startStation: $startStation,
-                             endStation: $endStation,
+                TerminalCell(startStation: startStation,
+                             endStation: endStation,
                              exchangeEnabled: $exchangeEnabled) { refresh() }
 
                 Spacer(minLength: 10)

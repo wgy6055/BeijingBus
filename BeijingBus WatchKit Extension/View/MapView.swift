@@ -19,7 +19,7 @@ struct MapView: View {
     private let station: Point
     private var summary: StatusSummary
 
-    init(lineDetail:LineDetail, station: LineDetail.Station) {
+    init(lineDetail: LineDetail, station: LineDetail.Station) {
         self.station = Point(location: station.location.CLCoordinate2D)
         region = MKCoordinateRegion(center: station.location.CLCoordinate2D,
                                     span: MKCoordinateSpan(latitudeDelta: 0.01,
